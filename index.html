@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Exam Center Allocator</title>
+</head>
+
+<body>
+    <div id="container">
+    <h2>Random Exam Center Allocator</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <button onclick="allocateCenter()">Allocate Center</button>
+    
+    <div id="output">
+        <h3>Exam Center Allocation</h3>
+        <p><strong>Name:</strong> <span id="outputName"></span></p>
+        <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+        <p><strong>Center:</strong> <span id="outputCenter"></span></p>
+    </div>
+    </div>
+    <script src="cities.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
