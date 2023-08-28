@@ -1,21 +1,24 @@
-const allocatedEmails = [];
+let allocatedEmails = [];
 
 function allocateCenter() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
 
+  // check for empty fields
   if (name == "" || email == "") {
     alert('Enter missing fields.');
     return;
   }
 
+  // check for duplicate emails
   if (allocatedEmails.includes(email)) {
     alert('Email already allocated to a center.');
     return;
   }
 
-  const randomIndex = Math.floor(Math.random() * indianCountries.length);
-  const center = indianCountries[randomIndex].name;
+  // generate random city
+  let randomIndex = Math.floor(Math.random() * indianCountries.length);
+  let center = indianCountries[randomIndex].name;
 
   allocatedEmails.push(email);
 
